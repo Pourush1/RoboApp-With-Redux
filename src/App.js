@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CardList from "./CardList";
 import { robots } from "./robots";
 import SearchBox from "./SearchBox";
+import "./App.css";
 
 //Defined a state to communicate the robots from the CardList and the SearchField
 //Get used to this syntax
@@ -28,7 +29,7 @@ class App extends Component {
     });
     return (
       <div className="tc">
-        <h1>Robo Friends</h1>
+        <h1 className="f1">Robo Friends</h1>
         <SearchBox searchChange={this.onSearchChange} />
         <CardList robots={filteredRobots} />
       </div>

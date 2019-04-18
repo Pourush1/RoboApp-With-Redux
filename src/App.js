@@ -3,6 +3,7 @@ import CardList from "./CardList";
 import { robots } from "./robots";
 import SearchBox from "./SearchBox";
 import "./App.css";
+import Scroll from "./Scroll";
 
 //Defined a state to communicate the robots from the CardList and the SearchField
 //Get used to this syntax
@@ -41,7 +42,9 @@ class App extends Component {
         <div className="tc">
           <h1 className="f1">Robo Friends</h1>
           <SearchBox searchChange={this.onSearchChange} />
-          <CardList robots={filteredRobots} />
+          <Scroll>
+            <CardList robots={filteredRobots} />
+          </Scroll>
         </div>
       );
     }

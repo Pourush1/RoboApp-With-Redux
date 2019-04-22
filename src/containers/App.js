@@ -16,10 +16,17 @@ class App extends Component {
     };
   }
 
+  //Promise object reprsents the eventual completion or failire of an asynchronous operation.
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/users")
-      .then(response => response.json())
-      .then(users => this.setState({ robots: users }));
+      .then(response => {
+        return response.json();
+      })
+      .then(users => {
+        console.log(users);
+        this.setState({ robots: users });
+        console.log(robots);
+      });
   }
   //Creating a funtion so at anytime the searchbo gets triggered it will create a event
   onSearchChange = event => {
@@ -29,7 +36,7 @@ class App extends Component {
   };
 
   render() {
-    const { robots, searchfield } = this.state;
+    const { robots, searchfield } = this.state; // This is destructuring
     const filteredRobots = robots.filter(robot => {
       return robot.name.toLowerCase().includes(searchfield.toLowerCase());
     });

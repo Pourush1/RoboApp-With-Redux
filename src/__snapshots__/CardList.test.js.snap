@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardList Component Doing Snapshot Testing renders without crashing 1`] = `
+<div>
+  <Card
+    email="Sincere@april.biz"
+    id={1}
+    key="0"
+    name="Leanne Graham"
+    username="Bret"
+  />
+</div>
+`;

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardComponent renders without crashing 1`] = `
+<div
+  className="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5"
+  id="cardComponent"
+>
+  <img
+    alt="robots"
+    id="robotImage"
+    src="https://robohash.org/undefined?size=200x200"
+  />
+  <div
+    id="nameEmail"
+  >
+    <h2
+      id="name"
+    >
+       
+    </h2>
+    <p
+      id="email"
+    />
+  </div>
+</div>
+`;

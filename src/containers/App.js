@@ -23,9 +23,12 @@ class App extends Component {
         return response.json();
       })
       .then(users => {
-        console.log(users);
+        // console.log(users);
         this.setState({ robots: users });
-        console.log(robots);
+        //console.log(robots);
+      })
+      .catch(error => {
+        console.log(error);
       });
   }
   //Creating a funtion so at anytime the searchbo gets triggered it will create a event

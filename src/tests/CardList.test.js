@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import CardList from "./components/CardList";
+import CardList from "../components/CardList";
 import checkPropTypes from "check-prop-types";
 
 const filteredRobots = [
@@ -70,39 +70,3 @@ describe("CardList Component", () => {
     });
   });
 });
-
-// const setUp = (props = {}) => {
-//   const component = shallow(<CardList {...props} />);
-//   console.log(`Component is ${component.debug()}`);
-//   return component;
-// };
-
-// describe("Have props", () => {
-//   let wrapper;
-//   beforeEach(() => {
-//     const props = {
-//       id: 1,
-//       name: "Leanne Graham",
-//       username: "Bret",
-//       email: "Sincere@april.biz"
-//     };
-//     wrapper = setUp(props);
-//   });
-
-//   test("Should render without any errors", () => {
-//     const component = wrapper.find("#cardList");
-//     expect(component.length).toBe(1);
-//   });
-// });
-
-// describe("Have no props", () => {
-//   let component;
-//   beforeEach(() => {
-//     component = setUp();
-//   });
-
-//   test("Should not render", () => {
-//     const wrapper = component.find(".cardList");
-//     expect(wrapper.length).toBe(0);
-//   });
-// });

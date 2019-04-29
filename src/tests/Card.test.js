@@ -1,11 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Card from "./components/Card";
-
-//Snapshot Testing
-test("CardComponent renders without crashing", () => {
-  expect(shallow(<Card />)).toMatchSnapshot();
-});
+import Card from "../components/Card";
 
 const setUp = (props = {}) => {
   const component = shallow(<Card {...props} />);
@@ -13,43 +8,45 @@ const setUp = (props = {}) => {
   return component;
 };
 
-//Functional Testing
 describe("Card Component", () => {
-  let component;
-  beforeEach(() => {
-    component = setUp();
+  //Snapshot Testing
+  describe("Snapshot Testing", () => {
+    test("CardComponent renders without crashing", () => {
+      expect(shallow(<Card />)).toMatchSnapshot();
+    });
   });
 
-  test("Should render without errors", () => {
-    const wrapper = component.find("#cardComponent");
-    expect(wrapper.length).toBe(1);
-  });
+  //Functional Testing
+  describe("Card Component", () => {
+    let component;
+    beforeEach(() => {
+      component = setUp();
+    });
 
-  test("Should render an image", () => {
-    const image = component.find("#robotImage");
-    expect(image.length).toBe(1);
-  });
-});
+    test("Should render without errors", () => {
+      const wrapper = component.find("#cardComponent");
+      expect(wrapper.length).toBe(1);
+    });
 
-describe("Should render name and email", () => {
-  let component;
-  beforeEach(() => {
-    component = setUp();
-  });
+    test("Should render an image", () => {
+      const image = component.find("#robotImage");
+      expect(image.length).toBe(1);
+    });
 
-  test("Should render without errors", () => {
-    const wrapper = component.find("#nameEmail");
-    expect(wrapper.length).toBe(1);
-  });
+    test("Should render without errors", () => {
+      const wrapper = component.find("#nameEmail");
+      expect(wrapper.length).toBe(1);
+    });
 
-  test("Should render a H2", () => {
-    const h2 = component.find("#name");
-    expect(h2.length).toBe(1);
-  });
+    test("Should render a H2", () => {
+      const h2 = component.find("#name");
+      expect(h2.length).toBe(1);
+    });
 
-  test("Should render a paragraph", () => {
-    const paragraph = component.find("#email");
-    expect(paragraph.length).toBe(1);
+    test("Should render a paragraph", () => {
+      const paragraph = component.find("#email");
+      expect(paragraph.length).toBe(1);
+    });
   });
 });
 

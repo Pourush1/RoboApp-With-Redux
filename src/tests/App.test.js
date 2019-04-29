@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import App from "./containers/App";
+import App from "../containers/App";
 
 test("App should fetch a list of Users", () => {
   const fetchSpy = jest.spyOn(window, "fetch");

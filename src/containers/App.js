@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CardList from "../components/CardList";
+import CardList from "../components/card-list/CardList";
 import { robots } from "../robots";
 import SearchBox from "../components/SearchBox";
 import "./App.css";
@@ -23,9 +23,7 @@ class App extends Component {
         return response.json();
       })
       .then(users => {
-        // console.log(users);
         this.setState({ robots: users });
-        //console.log(robots);
       })
       .catch(error => {
         console.log(error);
@@ -50,7 +48,10 @@ class App extends Component {
       return (
         <div className="tc">
           <h1 className="f1">Robo Friends</h1>
-          <SearchBox searchChange={this.onSearchChange} />
+          <SearchBox
+            placeholder="Search Robots"
+            searchChange={this.onSearchChange}
+          />
           <Scroll>
             <CardList robots={filteredRobots} />
           </Scroll>

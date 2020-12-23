@@ -1,3 +1,9 @@
+## Project Description
+
+This is a demo Robot finder react app incprporated with Redux for state management. I also have included testing using jest and enzyme.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

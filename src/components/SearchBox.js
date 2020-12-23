@@ -2,7 +2,7 @@ import React from "react";
 
 // USing destructuring to get the props object and grab its properties here from the App.js
 const SearchBox = props => {
-  const { searchField, placeholder, searchChange } = props;
+  const { placeholder, searchChange } = props;
   //using Tachyon class here
   return (
     <div className="pa2">

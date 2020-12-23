@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import CardList from "../components/CardList";
+import CardList from "../components/card-list/CardList";
 import checkPropTypes from "check-prop-types";
 
 const filteredRobots = [

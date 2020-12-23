@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Card from "../components/Card";
+import Card from "../components/card/Card";
 
 const setUp = (props = {}) => {
   const component = shallow(<Card {...props} />);

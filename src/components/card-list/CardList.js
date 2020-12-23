@@ -6,6 +6,10 @@ import Card from "../card/Card";
 
 class CardList extends Component {
   render() {
+    // if (true) {
+    //   throw new Error("Nooooo");
+    // }
+
     const { robots } = this.props;
     //console.log(robots);
     return (

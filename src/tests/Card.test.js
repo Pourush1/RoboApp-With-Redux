@@ -47,6 +47,13 @@ describe("Card Component", () => {
       const paragraph = component.find("#email");
       expect(paragraph.length).toBe(1);
     });
+
+    //Unit Testing
+    test("Contains a header with my name", () => {
+      const myOwnName = component.find("#myName");
+      // expect(paragraph.length).toBe(1);
+      expect(myOwnName.containsMatchingElement(<h3>Pourush</h3>)).toEqual(true);
+    });
   });
 });
 

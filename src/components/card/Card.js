@@ -18,7 +18,6 @@ const Card = props => {
       <div id="nameEmail">
         <h2 id="name">{name} </h2>
         <p id="email">{email}</p>
-        {/* <h3 id="myName">Pourush</h3> */}
       </div>
     </div>
   );

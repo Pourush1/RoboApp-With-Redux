@@ -15,7 +15,7 @@ const mapStateToProps = state => {
   };
 };
 
-//mapEspatchToProps say hey tell me what props I need to listen to that are actions that I need to dispatch
+//mapDispatchToProps say hey tell me what props I need to listen to that are actions that I need to dispatch
 const mapDispatchToProps = dispatch => {
   return {
     onSearchChange: event => dispatch(setSearchField(event.target.value))

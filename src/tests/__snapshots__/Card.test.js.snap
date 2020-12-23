@@ -21,11 +21,6 @@ exports[`Card Component Snapshot Testing CardComponent renders without crashing 
     <p
       id="email"
     />
-    <h3
-      id="myName"
-    >
-      Pourush
-    </h3>
   </div>
 </div>
 `;
